@@ -1,7 +1,8 @@
 
 import {
     initialState,
-    TOGGLE_PERMIT
+    TOGGLE_PERMIT,
+    TOGGLE_LOGIN
 } from "../constants/constants";
 
 export function reducer(state = initialState, action) {
@@ -10,6 +11,11 @@ export function reducer(state = initialState, action) {
             return {
                 ...state,
                 isPermit: !state.isPermit
+            }
+        case TOGGLE_LOGIN:
+            return {
+                ...state,
+                isLogin: !state.isLogin
             }
         default:
             return state;
